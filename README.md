@@ -1,36 +1,33 @@
-# <model_title_here>
+# ImageMol BACE
 
 ## Model Identifiers
 
-- Slug: <add_slug_here>
-- Ersilia ID: <add_ersilia_id_here>
-- Tags: <add_tags_here>
+- Slug: image-mol-bace
+- Ersilia ID: eos8c0o
+- Tags: BACE, classification
 
 ## Model Description
 
-Short description of the model in one or two sentences
-
-- Input: {unit and description of input)
-- Output: {unit and description of output)
-- Model type: (Regression or Classification)
-- Training set: (number of compounds and link to the training data)
-- Mode of training: (is it pretrained? that is were the checkpoints downloaded and used to train the model? or is it retrained? that is trained from scratch with an updated data)
+- Input: SMILES string
+- Output: inference probability and predicted class
+- Model type: Binary Classification
+- Training set: 1513 compounds in the data set from MoleculeNet
+- Mode of training: No retraining was carried out; the model checkpoint fined tuned on BACE dataset have been provided by the authors.
 
 ## Source Code
 
-Cite the source publication
-
-- Code: include link to the source code
-- Checkpoints: include the link to the checkpoints used if model is a pretrained model
+- Code: https://github.com/HongxinXiang/ImageMol
+- Checkpoints: https://drive.google.com/file/d/1q9-QCGbaACzw-QO2pOrK-FrGMr1yz1L0/view?usp=sharing
 
 ## License
 
-State the licences used which are GPL v3 license used by Ersilia and the license used by the source code, if any exists. Use [this guide]() on how to license new models to be incorporated into Ersilia's model hub
+License used by the original source code: MIT License
+Ersilia's License: GPLv3
 
 ## History
 
-- State the date when the model was downloaded and incorporated into Ersilia.
-- List any essential steps/modifications to the original code
+- This model was downloaded and incorporated into Ersilia on 16/01/2023
+- Only the image pre-processing and smile-to-image conversion code have been copied over from the model codebase. Normal PyTorch syntax is used to run inference on new samples.
 
 ## About Us
 

@@ -1,8 +1,8 @@
 FROM bentoml/model-server:0.11.0-py37
-MAINTAINER ersilia
-
-RUN conda install -c conda-forge rdkit=2021.03.4
-RUN pip install joblib==1.1.0
+LABEL author="ersilia"
 
 WORKDIR /repo
 COPY . /repo
+
+RUN conda install -c rdkit rdkit=2020.09.1.0
+RUN pip install torch==1.13.1+cpu torchvision==0.14.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
