@@ -1,36 +1,40 @@
-# ImageMol BACE
+# ImageMol human beta-secretase-1 (BACE-1) inhibition
 
-## Model Identifiers
+This model has been developed using ImageMol, a deep learning model pretrained on 10 million unlabelled small molecules and fine-tuned in a second step to predict the binding of inhibitors to the human beta secretase 1 (BACE-1) protein. The BACE-1 dataset from MoleculeNet contains 1522 compounds with their associated pIC50. A compound with pIC50 => 7 is considered a BACE-1 inhibitor.
 
-- Slug: image-mol-bace
-- Ersilia ID: eos8c0o
-- Tags: BACE, classification
+## Identifiers
 
-## Model Description
+* EOS model ID: `eos8c0o`
+* Slug: `image-mol-bace`
 
-- Input: SMILES string
-- Output: inference probability and predicted class
-- Model type: Binary Classification
-- Training set: 1513 compounds in the data set from MoleculeNet
-- Mode of training: No retraining was carried out; the model checkpoint fined tuned on BACE dataset have been provided by the authors.
+## Characteristics
 
-## Source Code
+* Input: `Compound`
+* Input Shape: `Single`
+* Task: `Classification`
+* Output: `Probability`
+* Output Type: `Float`
+* Output Shape: `Single`
+* Interpretation: Probability of BACE-1 inhibition (>0.5: Inhibitor). Compounds with pIC50 => 7 are considered BACE-1 inhibitors
 
-- Code: https://github.com/HongxinXiang/ImageMol
-- Checkpoints: https://drive.google.com/file/d/1q9-QCGbaACzw-QO2pOrK-FrGMr1yz1L0/view?usp=sharing
+## References
+
+* [Publication](https://www.nature.com/articles/s42256-022-00557-6)
+* [Source Code](https://github.com/ChengF-Lab/ImageMol)
+* Ersilia contributor: [DhanshreeA](https://github.com/DhanshreeA)
+
+## Citation
+
+If you use this model, please cite the [original authors](https://www.nature.com/articles/s42256-022-00557-6) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
 
 ## License
 
-License used by the original source code: MIT License
-Ersilia's License: GPLv3
+This package is licensed under a GPL-3.0 license. The model contained within this package is licensed under a None license.
 
-## History
-
-- This model was downloaded and incorporated into Ersilia on 16/01/2023
-- Only the image pre-processing and smile-to-image conversion code have been copied over from the model codebase. Normal PyTorch syntax is used to run inference on new samples.
+Notice: Ersilia grants access to these models 'as is' provided by the original authors, please refer to the original code repository and/or publication if you use the model in your research.
 
 ## About Us
 
 The [Ersilia Open Source Initiative](https://ersilia.io) is a Non Profit Organization ([1192266](https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5170657/full-print)) with the mission is to equip labs, universities and clinics in LMIC with AI/ML tools for infectious disease research.
 
-[Help us](https://www.ersilia.io/donate) achieve our mission or [volunteer](https://www.ersilia.io/volunteer) with us!
+[Help us](https://www.ersilia.io/donate) achieve our mission!
