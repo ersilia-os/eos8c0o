@@ -29,7 +29,7 @@ If you use this model, please cite the [original authors](https://www.nature.com
 
 ## License
 
-This package is licensed under a GPL-3.0 license. The model contained within this package is licensed under a None license.
+This package is licensed under a GPL-3.0 license. The model contained within this package is licensed under a MIT license.
 
 Notice: Ersilia grants access to these models 'as is' provided by the original authors, please refer to the original code repository and/or publication if you use the model in your research.
 
