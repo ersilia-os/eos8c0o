@@ -23,6 +23,11 @@ This model has been developed using ImageMol, a deep learning model pretrained o
 * [Source Code](https://github.com/ChengF-Lab/ImageMol)
 * Ersilia contributor: [DhanshreeA](https://github.com/DhanshreeA)
 
+## Ersilia model URLs
+* [GitHub](https://github.com/ersilia-os/eos8c0o)
+* [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8c0o.zip)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos8c0o) (AMD64)
+
 ## Citation
 
 If you use this model, please cite the [original authors](https://www.nature.com/articles/s42256-022-00557-6) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
