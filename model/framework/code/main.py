@@ -44,7 +44,7 @@ def my_model(smiles_list):
         with torch.no_grad():
             prob = torch.sigmoid(model(img_tensor))
             pred = 1 if prob > 0.5 else 0  # threshold from the original model code
-        outputs.append((prob.item(), pred))
+        outputs.append(prob.item())
         os.remove(path=path)
     return outputs
 
@@ -60,6 +60,6 @@ outputs = my_model(smiles_list)
 # write output in a .csv file
 with open(output_file, "w") as f:
     writer = csv.writer(f)
-    writer.writerow(["prob", "class"])  # header
+    writer.writerow(["prob"])  # header
     for o in outputs:
         writer.writerow(o)
