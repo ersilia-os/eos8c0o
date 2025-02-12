@@ -1,0 +1,2 @@
+name,type,direction,description
+prob,float,high,probability of inhibiting BACE-1 (cut-off pIC50=>7)
