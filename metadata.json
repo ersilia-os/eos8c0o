@@ -3,22 +3,26 @@
     "Slug": "image-mol-bace",
     "Status": "Ready",
     "Title": "ImageMol human beta-secretase-1 (BACE-1) inhibition",
-    "Description": "This model has been developed using ImageMol, a deep learning model pretrained on 10 million unlabelled small molecules and fine-tuned in a second step to predict the binding of inhibitors to the human beta secretase 1 (BACE-1) protein. The BACE-1 dataset from MoleculeNet contains 1522 compounds with their associated pIC50. A compound with pIC50 => 7 is considered a BACE-1 inhibitor.",
-    "Mode": "Pretrained",
-    "Task": [
-        "Classification"
-    ],
+    "Description": "This model has been developed using ImageMol, a deep learning model pretrained on 10 million unlabelled small molecules and fine-tuned in a second step to predict the binding of inhibitors to the human beta secretase 1 (BACE-1) protein. The BACE-1 dataset from MoleculeNet contains 1522 compounds with their associated pIC50. A compound with pIC50 => 7 is considered a BACE-1 inhibitor.\n",
+    "Source": "Local",
+    "Source Type": "External",
     "Input": [
         "Compound"
     ],
-    "Input Shape": "Single",
+    "Input Dimension": 1,
+    "Task": "Annotation",
+    "Subtask": "Activity prediction",
+    "Biomedical Area": [
+        "Alzheimer"
+    ],
+    "Target Organism": [
+        "Homo sapiens"
+    ],
     "Output": [
         "Probability"
     ],
-    "Output Type": [
-        "Float"
-    ],
-    "Output Shape": "Single",
+    "Output Dimension": 1,
+    "Output Consistency": "Fixed",
     "Interpretation": "Probability of BACE-1 inhibition (>0.5: Inhibitor). Compounds with pIC50 => 7 are considered BACE-1 inhibitors",
     "Tag": [
         "BACE",
@@ -26,11 +30,18 @@
         "MoleculeNet"
     ],
     "Publication": "https://www.nature.com/articles/s42256-022-00557-6",
+    "Publication Type": "Peer reviewed",
+    "Publication Year": 2022,
     "Source Code": "https://github.com/ChengF-Lab/ImageMol",
     "License": "MIT",
-    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8c0o.zip",
+    "Contributor": "DhanshreeA",
+    "Incorporation Date": "2023-01-17",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos8c0o",
     "Docker Architecture": [
         "AMD64"
+    ],
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8c0o.zip",
+    "Deployment": [
+        "Local"
     ]
 }
