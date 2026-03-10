@@ -3,6 +3,7 @@ import os
 import csv
 import sys
 
+import tempfile
 import torch
 import torchvision
 
@@ -37,8 +38,9 @@ def my_model(smiles_list):
     model.eval()
     img_processor = ImageData()
     outputs = list()
+    tmp_dir = tempfile.mkdtemp()
     for idx, smi in enumerate(smiles_list):
-        path = f"{os.getcwd()}/{idx}.png"
+        path = f"{tmp_dir}/{idx}.png"
         smiles_to_image(smi, savePath=path)
         img_tensor = img_processor.get_image(path).to(device)
         with torch.no_grad():
@@ -46,6 +48,7 @@ def my_model(smiles_list):
             pred = 1 if prob > 0.5 else 0  # threshold from the original model code
         outputs.append(prob.item())
         os.remove(path=path)
+    os.rmdir(tmp_dir)
     return outputs
 
 # read SMILES from .csv file, assuming one column with header
