@@ -39,17 +39,20 @@
     "License": "MIT",
     "Contributor": "DhanshreeA",
     "Incorporation Date": "2023-01-11",
-    "Last Packaging Date": "2026-03-10",
+    "Last Packaging Date": "2026-09-25",
     "Release": "v1.0.0",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8c0o.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos8c0o",
-    "Docker Architecture": "AMD64",
+    "Docker Architecture": [
+        "AMD64",
+        "ARM64"
+    ],
     "Model Size": 44.0,
     "Environment Size": 1215.0,
-    "Image Size": 8476.78,
-    "Computational Performance 1": 29.78,
-    "Computational Performance 2": 19.77,
-    "Computational Performance 3": 23.15,
-    "Computational Performance 4": 74.93,
-    "Computational Performance 5": 311.13
+    "Image Size": 1337.83,
+    "Computational Performance 1": 26.69,
+    "Computational Performance 2": 15.09,
+    "Computational Performance 3": 17.04,
+    "Computational Performance 4": 46.55,
+    "Computational Performance 5": 171.51
 }
