@@ -1,6 +1,6 @@
 # ImageMol human beta-secretase-1 (BACE-1) inhibition
 
-This model has been developed using ImageMol, a deep learning model pretrained on 10 million unlabelled small molecules and fine-tuned in a second step to predict the binding of inhibitors to the human beta secretase 1 (BACE-1) protein. The BACE-1 dataset from MoleculeNet contains 1522 compounds with their associated pIC50. A compound with pIC50 => 7 is considered a BACE-1 inhibitor.
+Flags binders of human beta-secretase 1, the protease whose cleavage of amyloid precursor protein initiates amyloid-beta production. The MoleculeNet BACE-1 collection of 1,522 compounds with measured pIC50 values supplied the training signal, thresholded so that compounds at pIC50 of 7 or above count as inhibitors. Representations come from ImageMol, pretrained on 10 million unlabelled molecules using images of structures rather than molecular graphs. The dataset is small and focused on a single target.
 
 This model was incorporated on 2023-01-11.Last packaged on 2026-09-25.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2023-01-11.Last packaged on 2026-09-25.
 ### Output
 - **Output Dimension:** `1`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability of BACE-1 inhibition (>0.5: Inhibitor). Compounds with pIC50 => 7 are considered BACE-1 inhibitors
+- **Interpretation:** Probability of BACE-1 inhibition, with inhibitors defined at pIC50 of 7 or above.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
