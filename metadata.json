@@ -3,7 +3,7 @@
     "Slug": "image-mol-bace",
     "Status": "Ready",
     "Title": "ImageMol human beta-secretase-1 (BACE-1) inhibition",
-    "Description": "Flags binders of human beta-secretase 1, the protease whose cleavage of amyloid precursor protein initiates amyloid-beta production. The MoleculeNet BACE-1 collection of 1,522 compounds with measured pIC50 values supplied the training signal, thresholded so that compounds at pIC50 of 7 or above count as inhibitors. Representations come from ImageMol, pretrained on 10 million unlabelled molecules using images of structures rather than molecular graphs. The dataset is small and focused on a single target.",
+    "Description": "Flags binders of human beta-secretase 1, the protease whose cleavage of amyloid precursor protein initiates amyloid-beta production. The MoleculeNet BACE-1 collection of roughly 1,500 compounds with measured pIC50 values supplied the training signal, thresholded so that compounds at pIC50 of 7 or above count as inhibitors. The served weights are the authors' own fine-tuning of ImageMol, an encoder pretrained on ten million unlabelled molecules drawn as images. The dataset is small and centred on a single target, so coverage of other chemistry is thin.",
     "Deployment": [
         "Local"
     ],
