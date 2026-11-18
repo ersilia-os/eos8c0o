@@ -1,8 +1,9 @@
 # ImageMol human beta-secretase-1 (BACE-1) inhibition
 
-Flags binders of human beta-secretase 1, the protease whose cleavage of amyloid precursor protein initiates amyloid-beta production. The MoleculeNet BACE-1 collection of roughly 1,500 compounds with measured pIC50 values supplied the training signal, thresholded so that compounds at pIC50 of 7 or above count as inhibitors. The served weights are the authors' own fine-tuning of ImageMol, an encoder pretrained on ten million unlabelled molecules drawn as images. The dataset is small and centred on a single target, so coverage of other chemistry is thin.
+Flags binders of human beta-secretase 1, the protease whose cleavage of amyloid precursor protein initiates amyloid-beta production. The MoleculeNet BACE-1 collection of roughly 1,500 compounds with measured pIC50 values supplied the training signal, thresholded so that compounds at pIC50 of 7 or above count as inhibitors. The served weights are the authors own fine-tuning of ImageMol, an encoder pretrained on ten million unlabelled molecules drawn as images. The dataset is small and centred on a single target, so coverage of other chemistry is thin.
 
-This model was incorporated on 2023-01-11.Last packaged on 2026-09-25.
+This model was incorporated on 2023-01-11.
+Last packaged on 2026-09-25.
 
 ## Information
 ### Identifiers
@@ -37,6 +38,7 @@ Below are the **Output Columns** of the model:
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos8c0o](https://hub.docker.com/r/ersiliaos/eos8c0o)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8c0o.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8c0o.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos8c0o_v1.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos8c0o_v1.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `44`
